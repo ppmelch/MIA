@@ -7,7 +7,7 @@ clc; % Limpia la ventana de comandos
 %% Parámetros iniciales
 
 nbits= 8; % Cantidad de bits
-np= 8; % Cantidad de pobladores 
+np= 400; % Cantidad de pobladores 
 
 % Rango o intervalo
 
@@ -45,14 +45,14 @@ for n=1:100  %cantidad de generaciones
     %Mutación
     p=rand() %número aleatorio  para decidir si muta 
 
-    if p>0.85
-        hijo=randi([1,np/2]) %hijo aleatorio
-        bit = randi(nbits);
+    if p >= 0.85
+            hijo = randi(np/2); % Hijo aleatorio
+            bit = randi(nbits); % Bit aleatorio
 
-        if hijobin(hijo,bit)==1
-            hijobin(hijo,bit)=0;
+        if hijobin(hijo, bit) == 1
+            hijobin(hijo, bit) = 0;
         else 
-            hijobin(hijo,bit)=1; % Mutar el bit seleccionado
+            hijobin(hijo, bit) = 1; 
         end
     end
 
