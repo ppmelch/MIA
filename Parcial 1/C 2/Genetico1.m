@@ -57,7 +57,7 @@ for n=1:100  %cantidad de generaciones
     end
 
     
-    hijodec = bi2de(hijobin); %convierte de binario a decimal
+    hijodec = bi2de(hijobin); %convierte de binario a decimalss
     %bin2dec
     x= [padredec ; hijodec];
 
